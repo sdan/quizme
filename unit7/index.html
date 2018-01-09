@@ -18,9 +18,12 @@
     Learn more at : <a href="http://mvhs-fuhsd.org/kavita_gupta/">Ms. Gupta's Website</a> </h2>
     <script>
         var quiztitle = "Chemistry Honors Unit 7";
-        console.log("VERSION RANDOMIZED NO TESTING 2.9");
+                console.log("hello there");
+        console.log("version rc.rd.3.8");
         var usedNum = [];
+        usedNum.push(0);
         var questionnum = 1;
+            var randomx = 0;
         var quiz = [{
                 "question": "What is the Molar Mass of: ",
                 "image": "http://latex.codecogs.com/gif.latex?KClO_4",
@@ -91,35 +94,34 @@
             function nextQuestion() {
 
 
+var yipee = true;
+                while (yipee) {
+                    randomx = randomWholeNum();
+                    console.log("Randomx Number: " + randomx);
+                    var outputArray = usedNum.toString();
+                                        console.log("array: " + outputArray);
+                                        var inornot = false;
+                                        inornot = usedNum.indexOf(randomx)>-1;
+                                        console.log("is randomx in usedNum? "+inornot);
+                    if (!inornot)
+                    {
+                        yipee = false;
+                    }
+                    else if(inornot)
+                    {
+                        yipee = true;
+                    }
+                }
+                currentquestion = randomx;
+
+                        usedNum.push(currentquestion);
+
+
+                                                                console.log("after array: " + outputArray);
 
                 console.log("Current Question: " + currentquestion);
 
-
-
-                var randomx = 0;
-                var yipee = true;
-                while (yipee) {
-                    console.log("Already used question.");
-                    randomx = randomWholeNum();
-                    console.log("Randomx Number: " + randomx);
-                    console.log("Quiz Length: " + quiz.length);
-                    var outputArray = usedNum.toString();
-                    console.log("OUTPUT ARRAY: " + outputArray);
-                    if (!(usedNum.indexOf(randomx)))
-                        yipee = false;
-                }
-                currentquestion = randomx;
-                                usedNum.push(currentquestion);
-
-
-
-
-
-
-
-
-                questionnum++;
-                console.log("QUESTION NUM: " + questionnum);
+                                questionnum++;
                 submt = true;
                 $('#explanation').empty();
                 $('#question').text(quiz[currentquestion]['question']);
@@ -136,6 +138,7 @@
                 addChoices(quiz[currentquestion]['choices']);
                 setupButtons();
 
+                
 
 
 
