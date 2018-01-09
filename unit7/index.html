@@ -18,7 +18,7 @@
     Learn more at : <a href="http://mvhs-fuhsd.org/kavita_gupta/">Ms. Gupta's Website</a> </h2>
     <script>
         var quiztitle = "Chemistry Honors Unit 7";
-        console.log("VERSION RANDOMIZED NO TESTING 2.1");
+        console.log("VERSION RANDOMIZED NO TESTING 2.9");
         var usedNum = [];
         var questionnum = 1;
         var quiz = [{
@@ -96,7 +96,6 @@
 
 
 
-                usedNum.push(currentquestion);
                 var randomx = 0;
                 var yipee = true;
                 while (yipee) {
@@ -110,7 +109,7 @@
                         yipee = false;
                 }
                 currentquestion = randomx;
-
+                                usedNum.push(currentquestion);
 
 
 
