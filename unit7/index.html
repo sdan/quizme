@@ -233,6 +233,86 @@ var yipee = true;
                     'text-align': 'center',
                     'font-size': '4em'
                 }).text(Math.round(score / quiz.length * 100) + '%').insertAfter('#question');
+                var final = Math.round(score / quiz.length * 100);
+                if(final>97)
+                {
+
+                   $(document.createElement('h2')).css({
+                    'text-align': 'center',
+                    'font-size': '4em'
+                }).text("Trust. But verify. ").insertAfter('#question'); 
+                   var img = $('<img />', { 
+  id: 'imagey',
+  src: 'trust.png',
+  alt: ''
+});
+img.insertAfter('#question');
+                $('#question-image').remove();
+    final = -1000;
+                }
+                if(final>90)
+                {
+                   $(document.createElement('h2')).css({
+                    'text-align': 'center',
+                    'font-size': '4em'
+                }).text("A++++ ").insertAfter('#question'); 
+                   var img = $('<img />', { 
+  id: 'imagey',
+  src: 'cc.png',
+  alt: ''
+});
+img.insertAfter('#question');
+                $('#question-image').remove();
+                   final = -999;
+                }
+                if(final>80)
+                {
+ $(document.createElement('h2')).css({
+                    'text-align': 'center',
+                    'font-size': '4em'
+                }).text("Good job!").insertAfter('#question'); 
+                   var img = $('<img />', { 
+  id: 'imagey',
+  src: 'cc.png',
+  alt: ''
+});
+img.insertAfter('#question');
+                $('#question-image').remove();
+    final = -1000;
+                }
+                if(final>70)
+                {
+ $(document.createElement('h2')).css({
+                    'text-align': 'center',
+                    'font-size': '4em'
+                }).text("Better luck next time!").insertAfter('#question'); 
+                   var img = $('<img />', { 
+  id: 'imagey',
+  src: 'cc.png',
+  alt: ''
+});
+img.insertAfter('#question');
+                $('#question-image').remove();
+    final = -1000;
+                }
+                if(final>-1)
+                {
+
+                   $(document.createElement('h2')).css({
+                    'text-align': 'center',
+                    'font-size': '4em'
+                }).text("Better luck next time!").insertAfter('#question'); 
+                   var img = $('<img />', { 
+  id: 'imagey',
+  src: 'fail.png',
+  alt: ''
+});
+img.insertAfter('#question');
+                $('#question-image').remove();
+    final = -1000;
+                }
+
+                
             }
             /**
              * Runs the first time and creates all of the elements for the quiz
